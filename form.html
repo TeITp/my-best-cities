@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Кушнір Андрій">
+  <title>Запропонувати місто — Мої 3 найкращі міста світу</title>
+</head>
+<body id="top">
+  <header>
+    <p><a href="index.html">Мої 3 найкращі міста світу</a></p>
+    <nav aria-label="Основна навігація">
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="city-lviv.html">Львів</a></li>
+        <li><a href="city-madrid.html">Мадрид</a></li>
+        <li><a href="city-london.html">Лондон</a></li>
+        <li><a href="form.html" aria-current="page">Запропонувати місто</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Запропонувати місто для наступного рейтингу</h1>
+    <p>Поля, позначені <abbr title="обов'язкове поле">*</abbr>, обов'язкові.</p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Про вас</legend>
+        <p>
+          <label for="name">Ім'я *</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </p>
+        <p>
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="name@example.com" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Місто</legend>
+        <p>
+          <label for="city">Назва міста *</label>
+          <input type="text" id="city" name="city" required>
+        </p>
+        <p>
+          <label for="country">Країна *</label>
+          <input type="text" id="country" name="country" list="countries" required>
+          <datalist id="countries">
+            <option value="Україна"></option>
+            <option value="Польща"></option>
+            <option value="Італія"></option>
+            <option value="Франція"></option>
+            <option value="Японія"></option>
+          </datalist>
+        </p>
+        <p>
+          <label for="type">Тип пропозиції *</label>
+          <select id="type" name="type" required>
+            <option value="">— оберіть —</option>
+            <option value="new">Нове місто до рейтингу</option>
+            <option value="replace">Замінити одне з міст</option>
+            <option value="fact">Цікавий факт про місто з рейтингу</option>
+          </select>
+        </p>
+        <p>
+          <label for="rating">Ваша оцінка міста (1–10)</label>
+          <input type="number" id="rating" name="rating" min="1" max="10" value="8">
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Найкращий сезон для поїздки</legend>
+        <p>
+          <input type="radio" id="season-spring" name="season" value="spring" checked>
+          <label for="season-spring">Весна</label>
+          <input type="radio" id="season-summer" name="season" value="summer">
+          <label for="season-summer">Літо</label>
+          <input type="radio" id="season-autumn" name="season" value="autumn">
+          <label for="season-autumn">Осінь</label>
+          <input type="radio" id="season-winter" name="season" value="winter">
+          <label for="season-winter">Зима</label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Чим цікаве місто</legend>
+        <p>
+          <input type="checkbox" id="int-architecture" name="interests[]" value="architecture">
+          <label for="int-architecture">Архітектура</label>
+          <input type="checkbox" id="int-food" name="interests[]" value="food">
+          <label for="int-food">Кухня</label>
+          <input type="checkbox" id="int-museums" name="interests[]" value="museums">
+          <label for="int-museums">Музеї</label>
+          <input type="checkbox" id="int-nature" name="interests[]" value="nature">
+          <label for="int-nature">Природа</label>
+        </p>
+      </fieldset>
+
+      <p>
+        <label for="reason">Чому варто відвідати це місто? *</label><br>
+        <textarea id="reason" name="reason" rows="6" cols="60" minlength="20" required></textarea>
+      </p>
+
+      <p>
+        <input type="checkbox" id="agree" name="agree" value="yes" required>
+        <label for="agree">Погоджуюся, що мою пропозицію може бути опубліковано в блозі *</label>
+      </p>
+
+      <p>
+        <button type="submit">Надіслати пропозицію</button>
+        <button type="reset">Очистити форму</button>
+      </p>
+    </form>
+
+    <p><a href="index.html">← Повернутися на головну</a></p>
+  </main>
+
+  <footer>
+    <p>Автор: Кушнір Андрій Назарович, група КН-41</p>
+    <p>Лабораторна робота №1 з дисципліни «WEB-програмування», <time datetime="2026">2026</time>.</p>
+    <p><a href="#top">Нагору</a> · <a href="index.html">На головну</a></p>
+  </footer>
+</body>
+</html>
